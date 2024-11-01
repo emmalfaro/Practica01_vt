@@ -1,37 +1,17 @@
 <!DOCTYPE html>
-<!--
-Mi primera pagina html dinamica
--->
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="htpp://www.thymeleaf.org">
-    
-    <head th:fragment="head">
-        <title>Árboles</title>
-        <meta charset="UTF-8"/>
-        <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
-        <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
-        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
-        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
-        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-    </head>
-    <body>
-        <header th:fragment="header" class="header">
-            <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #cfcfc0">
-                <div class="container">
-                    <a class="navbar-brand" th:href="@{/}">Árboles</a>
-                    <button class="navbar-toggler"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    
-                </div>
-            </nav>
-        </header>
-        
-        <footer th:fragment="footer" class="p-1 mt-3 text-white text-center fixed-bottom lead" style="background-color: #80c45e;">
-            Árboles Derechos Reservados 2024 &COPY;
-        </footer>
-        
-      </body>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="htpp://www.thymeleaf.org">
+
+<head th:replace="~{fragments/head :: head}"></head>
+
+<body>
+    <header th:replace="~{fragments/layout_utils :: header}"></header>
+
+    <div th:replace="~{${content}}"></div>
+
+    <footer th:replace="~{fragments/layout_utils :: footer}"></footer>
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+
 </html>

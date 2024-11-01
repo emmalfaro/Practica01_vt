@@ -5,18 +5,19 @@ import com.practica01.dao.ArbolDao;
 import com.practica01.domain.Arbol;
 import com.practica01.services.ArbolService;
 import com.practica01.services.ArbolService;
+
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class ArbolServiceImpl 
-        implements ArbolService {
+public class ArbolServiceImpl implements ArbolService {
 
-    @Autowired 
+    @Autowired
     private ArbolDao arbolDao;
-    
+
     @Override
     @Transactional(readOnly = true)
     public Arbol getArbol(Arbol arbol) {
@@ -37,7 +38,8 @@ public class ArbolServiceImpl
 
     @Override
     public List<Arbol> getArboles(boolean activos) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        // throw new UnsupportedOperationException("Not supported yet.");
+        return arbolDao.findAll();
     }
-    
+
 }

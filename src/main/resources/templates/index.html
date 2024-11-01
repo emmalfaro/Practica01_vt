@@ -6,20 +6,17 @@ Mi primera pagina html dinamica
       xmlns:th="htpp://www.thymeleaf.org">
     
     <head th:replace="~{layout/plantilla :: head}">
-        <title>Árboles</title>
-        <meta charset="UTF-8"/>
-        
     </head>
+
     <body>
         <header th:replace="~{layout/plantilla :: header}">
         </header>
                
-        <section th:replace="~{arboles/fragmentos :: botonesAgregar}"/>
-        <section th:replace="~{arboles/fragmentos :: agregarArbol}"/>
-        <section th:replace="~{arboles/fragmentos :: listadoArboles}"/>
+        <section th:replace="~{arboles/fragmentos :: botonesAgregar}"></section>
+        <section th:replace="~{arboles/fragmentos :: agregarArbol}"></section>
+        <section th:replace="~{arboles/fragmentos :: listadoArboles}"></section>
         
         <footer th:replace="~{layout/plantilla :: footer}">
-            Árboles Derechos Reservados 2024 &COPY;
         </footer>
         
       </body>

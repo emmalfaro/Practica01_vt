@@ -5,10 +5,12 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 import lombok.Data;
 
+/**
+ * 
+ */
 @Data 
 @Entity 
 @Table(name="arbol")
-// clase para almacenar datos
 public class Arbol implements Serializable { 
     
     private static final long serialVersionUID = 11; 

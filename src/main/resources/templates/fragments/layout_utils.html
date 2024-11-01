@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="htpp://www.thymeleaf.org">
+
+<header th:fragment="header" class="header">
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #cfcfc0">
+        <div class="container">
+            <a class="navbar-brand" th:href="@{/}">Árboles</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+        </div>
+    </nav>
+</header>
+
+<footer th:fragment="footer" class="p-1 mt-3 text-white text-center fixed-bottom lead"
+    style="background-color: #80c45e;">
+    Árboles Derechos Reservados 2024 &COPY;
+</footer>
+
+</html>

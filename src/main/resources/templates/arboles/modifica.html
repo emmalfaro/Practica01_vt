@@ -1,24 +1,6 @@
 <!DOCTYPE html>
-<!--
-Mi primera pagina html dinamica
--->
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="htpp://www.thymeleaf.org">
-    
-    <head th:replace="~{layout/plantilla :: head}">
-        <title>Árboles</title>
-        <meta charset="UTF-8"/>
-        
-    </head>
-    <body>
-        <header th:replace="~{layout/plantilla :: header}">
-        </header>
-        
-        <section th:replace="~{arboles/fragmentos :: editarArbol}"/>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="htpp://www.thymeleaf.org">
 
-        
-        <footer th:replace="~{layout/plantilla :: footer}">
-        </footer>
-        
-      </body>
+<section th:replace="~{arboles/fragmentos :: editarArbol}"></section>
+
 </html>
